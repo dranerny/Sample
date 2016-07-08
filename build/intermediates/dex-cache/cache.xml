@@ -5,7 +5,7 @@
         jar="F:\Android_studio\Sample\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         revision="24.0.0"
-        sha1="76d5aaa8bd4f6111f5fe72e68cef8ca405407676">
+        sha1="e11c74597cbb583396f7d906b75319a43ea8d69b">
         <dex dex="F:\Android_studio\Sample\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_81c3ba1bbd2e10dfcad6e2440b96c406e2d29ab3\classes.dex" />
     </item>
     <item
@@ -14,6 +14,13 @@
         revision="24.0.0"
         sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
         <dex dex="F:\Android_studio\Sample\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_24346c24978050de56b0da8bb63d7bc1a0ca165c\classes.dex" />
+    </item>
+    <item
+        jar="F:\Android_studio\Sample\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="74dabdecd52c794b32cee0079813b0786df47c69">
+        <dex dex="F:\Android_studio\Sample\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_54f17d35d0a48154f65d08ca09669314e423c9c0\classes.dex" />
     </item>
     <item
         jar="F:\Android_studio\Sample\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
@@ -42,13 +49,6 @@
         revision="24.0.0"
         sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
         <dex dex="F:\Android_studio\Sample\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_c1892700289da7e49b801f27ab6efe1af9f4d3a4\classes.dex" />
-    </item>
-    <item
-        jar="F:\Android_studio\Sample\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="24.0.0"
-        sha1="27a94fdfc05e1211f6ba4aedc2ac9305e3aa74ff">
-        <dex dex="F:\Android_studio\Sample\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_54f17d35d0a48154f65d08ca09669314e423c9c0\classes.dex" />
     </item>
     <item
         jar="F:\Android_studio\Sample\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"

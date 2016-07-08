@@ -1,4 +1,6 @@
 package com.example.draner.sample;
+import android.support.v7.app.AppCompatActivity;
+
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -6,29 +8,29 @@ import android.os.Bundle;
 import android.telephony.SmsMessage;
 import android.widget.Toast;
 
-public class SmsBroadcastReceiver extends BroadcastReceiver {
-    public static final String SMS_BUNDLE = "pdus";
+public class SmsBroadcastReceiver extends BroadcastReceiver
+{
+    public void onReceive(Context context, Intent intent)
+    {
+        Bundle myBundle = intent.getExtras();
+        SmsMessage [] messages = null;
+        String strMessage = "";
 
-    public void onReceive(Context context, Intent intent) {
-        Bundle intentExtras = intent.getExtras();
-        if (intentExtras != null) {
-            Object[] sms = (Object[]) intentExtras.get(SMS_BUNDLE);
-            String smsMessageStr = "";
-            for (int i = 0; i < sms.length; ++i) {
-                SmsMessage smsMessage = SmsMessage.createFromPdu((byte[]) sms[i]);
+        if (myBundle != null)
+        {
+            Object [] pdus = (Object[]) myBundle.get("pdus");
+            messages = new SmsMessage[pdus.length];
 
-                String smsBody = smsMessage.getMessageBody().toString();
-                String address = smsMessage.getOriginatingAddress();
-
-                smsMessageStr += "SMS From: " + address + "\n";
-                smsMessageStr += smsBody + "\n"+ "end of message"+"\n";
+            for (int i = 0; i < messages.length; i++)
+            {
+                messages[i] = SmsMessage.createFromPdu((byte[]) pdus[i]);
+                strMessage += "SMS From: " + messages[i].getOriginatingAddress();
+                strMessage += " : ";
+                strMessage += messages[i].getMessageBody();
+                strMessage += "\n";
             }
-            Toast.makeText(context, smsMessageStr, Toast.LENGTH_SHORT).show();
 
-            //this will update the UI with message
-            SmsReceiver inst = SmsReceiver.instance();
-            inst.updateList(smsMessageStr);
+            Toast.makeText(context, strMessage, Toast.LENGTH_SHORT).show();
         }
     }
 }
-
